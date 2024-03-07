@@ -390,7 +390,6 @@ void neoPixelCheck()
                 oledRefresh();
             }
         }
-        neoPixelReset();
         oledRefresh();
     }
 
@@ -406,7 +405,6 @@ void neoPixelCheck()
                 leds[indexLed * NEOPIXEL_LED_OFFSET] = colors[indexColor];
             FastLED.show();
             delay(fadeDelay * 50);
-            neoPixelReset();
             oledRefresh();
         }
     }
@@ -459,6 +457,7 @@ void loop()
 
     if (bleConnected)
     {
+        neoPixelReset();
         while (bleSerial.available())
         {
             char c = bleSerial.read();
