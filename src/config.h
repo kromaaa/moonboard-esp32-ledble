@@ -7,18 +7,18 @@
 #include <Adafruit_SSD1306.h>
 
 // Select the board type your are using (comment / uncomment) the matching line below
-// #define MOONBOARD_STANDARD
-#define MOONBOARD_MINI
+#define MOONBOARD_STANDARD
+// #define MOONBOARD_MINI
 
 // custom settings
-const int NEOPIXEL_LED_OFFSET = 2;                // Light every "NEOPIXEL_LED_OFFSET" LED of the LEDs strip
-const uint8_t NEOPIXEL_PIN = 2;                   // Use pin D2 (to be changed depending of your pin number used)
-const bool NEOPIXEL_CHECK1_AT_BOOT = false;       // Test the neo pixel led sysem at boot if true
+const int NEOPIXEL_LED_OFFSET = 1;                // Light every "NEOPIXEL_LED_OFFSET" LED of the LEDs strip
+const uint8_t NEOPIXEL_PIN = 12;                   // Use pin D2 (to be changed depending of your pin number used)
+const bool NEOPIXEL_CHECK1_AT_BOOT = true;        // Test the neo pixel led sysem at boot if true
 const bool NEOPIXEL_CHECK2_AT_BOOT = false;       // Test the neo pixel led sysem at boot if true
 const float NEOPIXEL_BRIGHTNESS = 0.8;            // Neopixel brightness setting (0 to 1)
 const float NEOPIXEL_BRIGHTNESS_ABOVE_HOLD = 0.1; // Neopixel brightness setting (0 to 1)
-char bleName[] = "MoonBoard";                     // Bluetooth name displayed by the esp32 BLE
-const bool OLED_ENABLED = true;                   // Enable or disable the oled screen
+char bleName[] = "Moonboard";                     // Bluetooth name displayed by the esp32 BLE  !!! DO NOT USE SPACES !!!
+const bool OLED_ENABLED = false;                  // Enable or disable the oled screen
 
 // Constants
 #if defined(MOONBOARD_MINI)
