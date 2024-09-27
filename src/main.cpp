@@ -457,7 +457,7 @@ void loop()
 
     if (bleConnected)
     {
-        # neoPixelReset(); should not reset problem if bluetooth disconnected
+        // # neoPixelReset(); should not reset problem if bluetooth disconnected
         while (bleSerial.available())
         {
             char c = bleSerial.read();
