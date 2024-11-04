@@ -139,9 +139,11 @@ void neoPixelShowHold(char holdType, int holdPosition)
         int gapLedAbove = 0;
         int rows = boardRows;
         int cell = holdPosition + 1;
-        int column = (cell / rows) + 1;
+        int column = (holdPosition / rows) + 1;
+        int topRowArray[] = {18, 19, 54, 55, 90, 91, 126, 127, 162, 163, 198};
 
-        if ((cell % rows == 0) || ((cell - 1) % rows == 0)) // start or end of the column
+        int *found = std::find(topRowArray, std::end(topRowArray), cell); // check if cell is in the top row
+        if (found != std::end(topRowArray))
             gapLedAbove = 0;
         else if (column % 2 == 0) // even column
             gapLedAbove = -1;
